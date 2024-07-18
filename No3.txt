@@ -1,0 +1,18 @@
+<?php
+function addNumber($start, $end, $limit) {
+    $list_number = [$start, $end];
+    $result = $end;
+    for ($x = 0; $x <= $limit; $x++) {
+        if(count($list_number) == $limit){
+            break;
+        }
+        $result += $start;
+        $list_number[] = $result;
+        
+    }
+    return implode(",", $list_number);
+}
+
+echo addNumber(5,7,4);
+?>
+
